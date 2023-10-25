@@ -1,0 +1,41 @@
+.icon {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+}
+
+.small {
+  width: 30px;
+  height: 30px;
+}
+
+.send-icon {
+  background-image: url("../img/send.png");
+}
+
+.home-icon {
+  background-image: url("../img/home.png");
+}
+
+.search-icon {
+  background-image: url("../img/magnifier.png");
+}
+
+.user-icon {
+  background-image: url("../img/user.png");
+}
+
+.settings-icon {
+  background-image: url("../img/setting.png");
+}
+
+.plus-icon {
+  background-image: url("../img/plus.png");
+}
+
+.share-icon {
+  background-image: url("../img/share.png");
+}
