@@ -45,7 +45,7 @@ export class WebSocketConnect {
   }
 
   getMessage(message) {
-    this.handler.createMessage(message, localStorage.getItem("name"));
+    this.handler.createMessage(message, localStorage.getItem("name"), "first");
   }
 
   sendMessage(message) {

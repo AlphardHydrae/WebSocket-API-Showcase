@@ -18,7 +18,7 @@ export class Handler {
           .slice()
           .reverse()
           .forEach((message) => {
-            this.createMessage(message, name);
+            this.createMessage(message, name, "last");
           });
 
         console.log("fetch status: " + this.xhr.status);
@@ -34,7 +34,7 @@ export class Handler {
     this.xhr.send();
   }
 
-  createMessage(message, name) {
+  createMessage(message, name, position) {
     let div = document.createElement("div");
 
     let divDateTime = document.createElement("div");
@@ -46,7 +46,7 @@ export class Handler {
 
     let divSource = document.createElement("div");
     divSource.classList.add("message-source");
-    divContent.innerHTML = "(" + message.From + ")";
+    divSource.innerHTML = "(" + message.From + ")";
 
     let divText = document.createElement("div");
     divText.classList.add("message-text");
@@ -68,6 +68,12 @@ export class Handler {
       div.appendChild(divContent);
     }
 
-    document.getElementById("chat").appendChild(div);
+    let chat = document.getElementById("chat");
+
+    if (position === "first") {
+      chat.insertBefore(div, chat.firstChild);
+    } else {
+      chat.appendChild(div);
+    }
   }
 }

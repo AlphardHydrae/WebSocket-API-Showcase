@@ -11,10 +11,16 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #f0f0f0;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 #background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #606060;
+  z-index: -999;
+  overflow: hidden;
 }
 
 #window {
@@ -106,7 +112,7 @@ body {
 }
 
 #sidebar {
-  width: 20%;
+  width: 25%;
   padding: 2rem;
   display: flex;
   flex-direction: row;
@@ -131,6 +137,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  margin-left: 2rem;
   border-radius: 1rem;
   background-color: #ffb20b;
 }
@@ -173,6 +180,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 #chat {
@@ -187,6 +195,7 @@ body {
 
 .message {
   width: 60%;
+  height: auto;
   margin: 0.5rem 0;
   padding: 0.5rem;
   border-radius: 0.5rem;
@@ -225,8 +234,10 @@ body {
 }
 
 .message-source {
+  width: 25%;
   font-size: 0.8em;
   color: #000;
+  text-align: center;
 }
 
 .message-in .message-source {
@@ -241,6 +252,9 @@ body {
 
 .message-text {
   flex: 1;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  word-wrap: break-word;
   padding: 0.5rem;
   border-radius: 0.5rem;
 }

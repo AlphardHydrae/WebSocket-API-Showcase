@@ -15,6 +15,15 @@ window.onload = () => {
         websocket.sendMessage(document.getElementById("text-field").value);
         document.getElementById("text-field").value = "";
       });
+
+      document
+        .getElementById("text-field")
+        .addEventListener("keydown", (event) => {
+          if (event.key === "Enter") {
+            websocket.sendMessage(document.getElementById("text-field").value);
+            document.getElementById("text-field").value = "";
+          }
+        });
     })
     .catch((error) => {
       console.log(error);
