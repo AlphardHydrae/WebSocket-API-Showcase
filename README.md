@@ -32,3 +32,9 @@ export { url, code };
 ### Deploy
 
 To run the project simply open the _index.html_ file in any browser.
+
+##
+
+### Showcase
+
+![app](/img/github/screenshot.png)
